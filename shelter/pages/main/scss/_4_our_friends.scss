@@ -1,0 +1,151 @@
+
+
+.our-friends {
+	background: #F6F6F6;
+	padding: 82px 0px 100px 0px;
+	@media (max-width: $w767) {
+		padding: 42px 0px 42px 0px;
+	}
+
+	&__container {}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		
+	}
+
+	&__tittle {
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		margin-bottom: 58px;
+		color: #545454;
+		text-align: center;
+		letter-spacing: 0.06em;
+		@media (max-width: $w767) {
+			font-size: 25px;
+			text-align: center;
+			letter-spacing: 0.06em;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__slider {}
+
+	&__bottom-button-wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 60px;
+		@media (max-width: $w767) {
+			margin-top: 43px;
+		}
+	}
+
+	&__bottom-button {}
+}
+
+
+.slider {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	@media (max-width: $w767) {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__button-left {
+		background: url(./../../assets/icons/Arrow-left.svg) no-repeat center center;
+		@media (max-width: $w767) {
+			order: 2;
+			margin-top: 20px;
+			margin-right: 40px;
+			
+		}
+	}
+	&__button-right {
+		background: url(./../../assets/icons/Arrow-right.svg) no-repeat center center;
+	
+		@media (max-width: $w767) {
+			order: 3;
+			margin-top: 20px;
+			margin-left: 40px;
+		}
+	}
+
+	&__item-body {
+		display: flex;
+		gap: 90px;
+		@media (max-width: $w1279) {
+			flex: 0 1 90%;
+			gap: 15px;
+			justify-content: space-around;
+		}
+		@media (max-width: $w767) {
+			order: 1;
+			margin: 0 auto;
+		}
+	}
+
+	&__item-card {
+		background: #FAFAFA;
+		border-radius: 9px;
+		transition: background-color 0.3s;
+		
+	}
+	&__item-card:nth-child(3) {
+		@media (max-width: $w1279) {
+			display: none;
+		}
+		
+	}
+	&__item-card:nth-child(n+2) {
+		@media (max-width: $w767) {
+			display: none;
+		}
+	
+	}
+	&__item-card:hover {
+		cursor: pointer;
+		background: #FFFFFF;
+		.item-card__button {
+			background-color: #FDDCC4;
+			border-color: #FDDCC4;
+		}
+	
+	}
+
+	
+}
+
+.item-card {
+	
+
+	&__photo {
+		margin-bottom: 30px;
+	}
+
+	&__name {
+		color: #545454;
+		font-size: 20px;
+		line-height: 23px;
+		letter-spacing: 0.06em;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	&__button-wrapper {
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+		
+	}
+
+	&__button {
+		border: 2px solid #F1CDB3;
+		background-color: inherit;
+		padding: 13px 43px;
+		
+	}
+}

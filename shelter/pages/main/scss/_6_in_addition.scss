@@ -1,0 +1,135 @@
+
+
+.in-addition {
+	background: #F6F6F6;
+	padding: 82px 0px 100px 0px;
+	@media (max-width: $w767) {
+		padding: 43px 0px 43px 0px;
+	}
+
+	&__container {}
+
+	&__main {
+		display: flex;
+		gap: 30px;
+		@media (max-width: $w1279) {
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			gap: 60px;
+		}
+		@media (max-width: $w767) {
+			gap: 42px;
+		}
+	}
+
+	&__image {
+		flex: 0 1 54%;
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		@media (max-width: $w1279) {
+			order: 2;
+			max-width: 100%;
+			flex: 0 1 auto;
+		}
+		@media (max-width: $w767) {
+			max-width: 87%; 
+		}
+	}
+
+	&__img img {
+		max-width: 100%;
+		
+	}
+
+	&__donation {
+		max-width: 380px;
+		@media (max-width: $w1279) {
+			order: 1;
+		}
+		@media (max-width: $w767) {
+			padding: 0 8px;
+		}
+	}
+
+	&__tittle {
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		color: #545454;
+		margin-bottom: 20px;
+		@media (max-width: $w767) {
+			margin-bottom: 40px;
+			font-size: 25px;
+			padding: 0 10%;
+			text-align: center;
+			letter-spacing: 0.06em;
+			margin-bottom: 23px;
+		}
+	}
+
+	&__info-bank {
+		line-height: 110%;
+		letter-spacing: 0.06em;
+		color: #545454;
+		margin-bottom: 18px;
+		@media (max-width: $w767) {
+			margin-bottom: 22px;
+			letter-spacing: 0em;
+			padding: 0px 5px;
+		}
+	}
+
+	&__card-number {
+		background: #F1CDB3;
+		border-radius: 9px;
+		display: flex;
+		margin-bottom: 20px;
+		padding: 10px 15px;
+		width: 92.3%;
+		transition: background-color 0.3s;
+		@media (max-width: $w1279) {
+			margin-bottom: 19px;
+		}
+		@media (max-width: $w767) {
+			width: 100%;
+			padding: 10px 15px;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__card-number:hover {
+		background: #FDDCC4;
+	}
+
+	&__logo-card {
+
+	}
+
+	&__number-card {
+		padding-left: 15px;
+		font-size: 20px;
+		line-height: 115%;
+		letter-spacing: 0.06em;
+		color: #545454;
+		@media (max-width: $w767) {
+			font-size: 15px;
+			line-height: 110%;
+			padding-top: 4px;
+		}
+	}
+
+	&__discribe-under-card {
+		font-family: 'Arial';
+		font-style: italic;
+		font-size: 12px;
+		line-height: 150%;
+		color: #B2B2B2;
+		@media (max-width: $w767) {
+			letter-spacing: 0em;
+			text-align: justify;
+			padding: 0px 2px;
+		}
+	}
+}

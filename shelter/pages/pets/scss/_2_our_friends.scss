@@ -1,0 +1,173 @@
+
+.our-friends {
+	background: #F6F6F6;
+	padding: 201px 0px 100px 0px;
+	@media (max-width: $w1279) {
+		padding: 201px 0px 77px 0px;
+	}
+	@media (max-width: $w767) {
+		padding: 163px 0px 44px 0px;
+	}
+
+	&__container {}
+
+	&__main {}
+
+	&__tittle {
+		font-size: 35px;
+		line-height: 130%;
+		letter-spacing: 0.06em;
+		margin-bottom: 58px;
+		color: #545454;
+		text-align: center;
+		letter-spacing: 0.06em;
+		@media (max-width: $w1279) {
+			margin-bottom: 29px;
+		}
+		@media (max-width: $w767) {
+			font-size: 25px;
+			text-align: center;
+			letter-spacing: 0.06em;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__slider {}
+
+	&__control-main {
+		font-size: 20px;
+		line-height: 115%;
+	}
+
+	&__control-button {
+		display: flex;
+		justify-content: center;
+		gap: 20px;
+		@media (max-width: $w767) {
+			gap: 10px;
+		}
+	}
+
+	&__button-first {
+		user-select: none; 
+	}
+
+	&__button-left {
+		user-select: none; 
+	}
+
+	&__button-number {
+		user-select: none; 
+	}
+
+	&__button-right {
+		user-select: none; 
+	}
+
+	&__button-last {
+		user-select: none; 
+	}
+}
+
+
+.slider {
+
+
+	&__item-body {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 30px;
+		@media (max-width: $w1279) {
+			justify-content: center;
+			flex-wrap: wrap;
+			margin-bottom: 8px;
+		}
+		@media (max-width: $w767) {
+			margin-bottom: 11px;
+		}
+	}
+
+	&__item-card-wrapper {
+		@media (max-width: $w1279) {
+			flex: 0 1 44%;
+			display: flex;
+			justify-content: center;
+			margin-bottom: 30px;
+		}
+		@media (max-width: $w767) {
+			flex: 0 1 88%;
+		}
+	}
+
+	&__item-card {
+		background: #FAFAFA;
+		border-radius: 9px;
+		transition: background-color 0.3s;
+
+		@media (max-width: $w1279) {
+			margin: 0 5px;
+			max-width: 270px;
+		}
+	}
+
+	@media (max-width: $w1279) {
+		&__item-card-wrapper:nth-child(n+7) {
+			display: none;
+		}
+	}
+	
+	@media (max-width: $w767) {
+		&__item-card-wrapper:nth-child(n+4) {
+			display: none;
+		}
+	}
+
+	&__item-card:hover {
+		cursor: pointer;
+		background: #FFFFFF;
+
+		.item-card__button {
+			background-color: #FDDCC4;
+			border-color: #FDDCC4;
+		}
+
+	}
+}
+
+.item-card {
+
+	&__photo {
+		margin-bottom: 30px;
+	}
+
+	&__name {
+		color: #545454;
+		font-size: 20px;
+		line-height: 23px;
+		letter-spacing: 0.06em;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+
+	&__button-wrapper {
+		margin-bottom: 30px;
+		display: flex;
+		justify-content: center;
+
+	}
+
+	&__button {
+		border: 2px solid #F1CDB3;
+		background-color: inherit;
+		padding: 13px 43px;
+		margin-bottom: 30px;
+		@media (max-width: $w1279) {
+			margin-bottom: 0px;
+		}
+	}
+}
+
+
+
+

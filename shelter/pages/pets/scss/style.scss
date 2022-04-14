@@ -1,0 +1,177 @@
+@import "_fonts";
+@import "_nullstyle";
+
+$containerWith: 1200px;
+$w1279: 1279px;
+$w767: 767px;
+
+
+html,
+body {
+
+	//min-width: 1280px; //no adaptive
+	font-size: 15px;
+	font-weight: 400;
+	font-family: 'Georgia';
+	font-style: normal;
+	line-height: 160%;
+	scroll-behavior: smooth;
+	@media (max-width: 319px) {
+		min-width: 320px;
+	}
+}
+
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden; //Контент обрезается, без предоставления прокрутки. Для разных отступов.
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.page {
+	flex: 1 0 auto;
+}
+
+.footer {
+	flex-shrink: 0;
+}
+
+._container {
+	max-width: $containerWith;
+	margin: 0 auto;
+	padding: 0px 40px;
+	box-sizing: content-box; //padding не учитавается в размере
+	@media (max-width: $w1279) {
+		padding: 0px 30px;
+	}
+	@media (max-width: $w767) {
+		padding: 0px 10px;
+	}
+}
+
+.menu-opened {
+	overflow: hidden; //! запрет скролла при открытом меню
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 4000px;
+		width: 100%;
+		background: rgba(41, 41, 41, 0.6);
+		z-index: 2;
+	}
+	.header {
+		background: rgba(146, 146, 146, 0.6);
+	}
+}
+
+._btn {
+	display: flex;
+	padding: 15px 45px;
+	justify-content: center;
+	align-items: center;
+	font-size: 17px;
+	line-height: 130%;
+	letter-spacing: 0.06em;
+	background: #F1CDB3;
+	border-radius: 100px;
+	color: #292929;
+	transition: background-color 0.3s;
+}
+
+._btn:hover {
+	background: #FDDCC4;
+	border-color: #FDDCC4;
+}
+
+._btn-circle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52px;
+	height: 52px;
+	border: 2px solid #F1CDB3;
+	border-radius: 100px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+._btn-circle:hover {
+	background-color: #FDDCC4;
+	border-color: #FDDCC4;
+}
+
+.btn-active {
+	background-color: #F1CDB3;
+	border-color: #F1CDB3;
+	cursor: default;
+}
+
+.btn-active:hover {
+	background-color: #F1CDB3;
+	border-color: #F1CDB3;
+}
+
+.btn-disabled {
+	color: #CDCDCD;
+	border-color: #CDCDCD;
+	pointer-events: none;
+}
+
+.btn-disabled:hover {
+	color: #CDCDCD;
+	border-color: #CDCDCD;
+	background-color: inherit;
+}
+
+._btn {
+	position: relative;
+	overflow: hidden;
+}
+
+.btn:focus {
+	outline: none;
+}
+
+._btn .circle { 
+	position: absolute;
+	background-color: #fff;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	animation: scale 0.5s ease-out;
+	overflow: hidden;
+}
+
+@keyframes scale {
+	to {
+		transform: translate(-50%, -50%) scale(3);
+		opacity: 0;
+	}
+}
+
+
+@import "_1_our_header";
+@import "_2_our_friends";
+@import "_3_footer";
+@import "_8_popup";
+
+.animation {
+	animation: fade 0.5s linear 1;
+}
+
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
